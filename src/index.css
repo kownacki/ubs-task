@@ -1,0 +1,19 @@
+/* Minimal global styles. Other styling done by styled-component */
+body {
+  font: 16px Arial;
+  margin: 0;
+  --primary-color: #35588E;
+  --primary-color-dark: #1D3C66;
+  --light-grey: #F7F7F7;
+  --dark-grey: #dedede;
+  background: var(--light-grey);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1, h2 {
+  margin: 0;
+}
