@@ -6,6 +6,8 @@ body {
   --primary-color-dark: #1D3C66;
   --light-grey: #F7F7F7;
   --dark-grey: #dedede;
+  --font-color: #000000;
+  color: var(--font-color);
   background: var(--light-grey);
 }
 

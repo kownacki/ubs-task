@@ -2,8 +2,9 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import '../index.css';
 import { Header } from './Header';
-import { Section } from './Section';
 import { AboutSection } from './sections/AboutSection';
+import { CoordinatorSection } from './sections/CoordinatorSection';
+import { WhenSection } from './sections/WhenSection';
 
 const Root = styled.div`
 `;
@@ -23,7 +24,8 @@ export const App: FC = () => {
       <Header />
       <Contents>
         <AboutSection />
-        <Section title="Coordinator" />
+        <CoordinatorSection />
+        <WhenSection />
       </Contents>
     </Root>
   );

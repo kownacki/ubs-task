@@ -14,6 +14,11 @@ const Label = styled.div`
 
 const InputsContainer = styled.div`
   flex: 1;
+  line-height: 28px;
+
+  & > * {
+    margin-right: 12px;
+  }
 `;
 
 export interface FormLineProps {
