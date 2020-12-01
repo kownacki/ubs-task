@@ -1,31 +1,22 @@
 import React, { FC } from 'react';
 import { Section } from '../Section';
 import { FormLine } from '../FormLine';
-import { TextField } from '../form-elements/TextField';
-import { Date } from '../form-elements/Date';
-import { Time } from '../form-elements/Time';
-import { Radio } from '../form-elements/Radio';
+import { Input } from '../form-elements/Input';
 
 export const WhenSection: FC = () => {
   return (
     <Section title="When">
       <FormLine label="Starts on">
-        <Date />
+        <Input type="date" name="date_day" />
         <span>at</span>
-        <Time />
-        <span>
-          <Radio name="am" value="am" id="am" />
-          <label htmlFor="am">AM</label>
-        </span>
-        <span>
-          <Radio name="pm" value="pm" id="pm" />
-          <label htmlFor="pm">PM</label>
-        </span>
+        <Input type="time" name="date_time" />
       </FormLine>
       <FormLine label="Duration">
-        <TextField
+        <Input
+          type="number"
           placeholder="Number"
-          size={6}
+          name="duration"
+          width="90px"
         />
         <span>hour</span>
       </FormLine>

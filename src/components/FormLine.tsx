@@ -9,14 +9,14 @@ const Label = styled.div`
   width: 160px;
   text-transform: uppercase;
   color: var(--primary-color);
-  padding-top: 8px;
+  padding-top: 9px;
 `;
 
 const InputsContainer = styled.div`
   flex: 1;
-  line-height: 28px;
+  line-height: 36px;
 
-  & > * {
+  & > *:not(:last-child) {
     margin-right: 12px;
   }
 `;

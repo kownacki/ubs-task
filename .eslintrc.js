@@ -31,5 +31,7 @@ module.exports = {
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'quotes': [2, 'single', { avoidEscape: true }],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
   },
 };

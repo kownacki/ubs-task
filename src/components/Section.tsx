@@ -1,9 +1,8 @@
 import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
-import { sectionBoxShadow } from '../utils/styles';
 
 const Root = styled.div`
-  box-shadow: ${sectionBoxShadow};
+  box-shadow: var(--box-shadow);
   padding: 12px 40px;
   background: #ffffff;
 `;
