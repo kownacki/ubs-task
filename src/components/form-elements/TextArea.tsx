@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import React, { FC, TextareaHTMLAttributes, useState } from 'react';
 
-export const TextArea = styled.textarea`
+const TextAreaElement = styled.textarea`
+  display: block;
   border: solid 1px var(--dark-grey);
   font: var(--input-font-size) Arial;
   resize: none;
@@ -8,3 +10,24 @@ export const TextArea = styled.textarea`
   box-sizing: border-box;
   width: 100%;
 `;
+
+const Counter = styled.div`
+  font-size: 12px;
+  text-align: right;
+  margin-top: 4px;
+`;
+
+export const TextArea: FC<TextareaHTMLAttributes<HTMLTextAreaElement>> = (props) => {
+  const [charCount, setCharCount] = useState(0);
+
+  return (
+    <div>
+      <TextAreaElement onChange={(event) => setCharCount(event.target.value.length)} {...props} />
+        {props.maxLength && (
+          <Counter>
+            {`${charCount} / ${props.maxLength}`}
+          </Counter>
+        )}
+    </div>
+  );
+};

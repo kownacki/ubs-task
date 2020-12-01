@@ -4,7 +4,7 @@ export const Radio = styled.input.attrs({ type: 'radio' })`
   appearance: none;
   position: relative;
   top: 2px;
-  margin: 0 8px 0 0;
+  margin: 8px 8px 0 0;
   width: 16px;
   height: 16px;
 

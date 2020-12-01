@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { useCategories } from '../../../redux/selectors';
 import { Section } from '../../Section';
 import { FormLine } from '../../FormLine';
+import { InlineBlock } from '../../form-elements/InlineBlock';
 import { Input } from '../../form-elements/Input';
 import { TextArea } from '../../form-elements/TextArea';
 import { Select } from '../../form-elements/Select';
@@ -25,6 +26,7 @@ export const AboutSection: FC = () => {
           placeholder="Write about your event, be creative"
           rows={8}
           name="description"
+          maxLength={140}
           required
         />
       </FormLine>
@@ -44,7 +46,7 @@ export const AboutSection: FC = () => {
           name="reward"
           width="90px"
         />
-        <span>reward points for attendance</span>
+        <InlineBlock>reward points for attendance</InlineBlock>
       </FormLine>
     </Section>
   );

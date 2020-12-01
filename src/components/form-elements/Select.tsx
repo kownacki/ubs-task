@@ -1,4 +1,4 @@
-import React, {FC, SelectHTMLAttributes} from 'react';
+import React, { FC, SelectHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
 // Html select doesn't allow :before pseudo element, thus a wrapper is required

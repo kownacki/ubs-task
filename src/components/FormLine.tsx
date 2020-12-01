@@ -18,8 +18,7 @@ const Label = styled.div`
 
 const InputsContainer = styled.div`
   flex: 1;
-  line-height: 36px;
-  
+
   & > * {
     margin-bottom: 2px;
   }
