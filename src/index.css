@@ -6,7 +6,9 @@ body {
   --primary-color-dark: #1D3C66;
   --accent-color: #FE8E1D;
   --light-grey: #F7F7F7;
-  --dark-grey: #dedede;
+  --dark-grey: #DEDEDE;
+  --validated-background: #EFFCF2;
+  --validated-color: #ABCEB2;
   --font-color: #000000;
   --input-font-size: 14px;
   --box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);

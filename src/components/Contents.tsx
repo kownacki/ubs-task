@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import styled from 'styled-components';
-import { useCategories } from '../redux/selectors'
 import { AboutSection } from './sections/AboutSection';
 import { CoordinatorSection } from './sections/CoordinatorSection';
 import { WhenSection } from './sections/WhenSection';
 import { Submit } from './Submit';
+import { Validated } from './Validated';
 
 const Root = styled.div`
   max-width: 900px;
@@ -38,27 +38,26 @@ interface Output {
 }
 
 export const Contents: FC = () => {
-  const categories = useCategories();
-  console.log(categories);
+  const [isValidated, setIsValidated] = useState(false);
 
   const handlePublish = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const formElement = document.getElementById('form');
-    if (formElement) {
-      const formData = (new FormData(formElement as HTMLFormElement));
-      const output:Record<string, unknown> = {};
-      formData.forEach((value, key) => output[key] = value);
-      output.paid_event = output.paid_event === 'paid';
-      ['category_id', 'reward', 'duration', ...(output.paid_event ? ['event_fee'] : [])]
-        .map((key) => output[key] = Number(output[key]));
-      output.coordinator = { id: output.coordinator_id, email: output.coordinator_email };
-      //todo delete coordinator fields
-      output.duration = output.duration as number * 3600;
-      output.date = `${output.date_day}T${output.date_time}`;
-      //todo delete date fields
-      console.log(output as unknown as Output);
-    }
+    const formElement = document.getElementById('form') as HTMLElement;
+    const formData = (new FormData(formElement as HTMLFormElement));
+    const output:Record<string, unknown> = {};
+    formData.forEach((value, key) => output[key] = value);
+    output.paid_event = output.paid_event === 'paid';
+    ['category_id', 'reward', 'duration', ...(output.paid_event ? ['event_fee'] : [])]
+      .map((key) => output[key] = Number(output[key]));
+    output.coordinator = { id: output.coordinator_id, email: output.coordinator_email };
+    //todo delete coordinator fields
+    output.duration = output.duration as number * 3600;
+    output.date = `${output.date_day}T${output.date_time}`;
+    //todo delete date fields
+    console.log(output as unknown as Output);
+
+    setIsValidated(true);
     // console.log({
     //   title: string,
     //   description: string,
@@ -77,14 +76,18 @@ export const Contents: FC = () => {
 
   return (
     <Root>
-      <Form id="form" onSubmit={handlePublish}>
-        <AboutSection />
-        <CoordinatorSection />
-        <WhenSection />
-        <SubmitContainer>
-          <Submit value="Publish Event" />
-        </SubmitContainer>
-      </Form>
+      {!isValidated ? (
+        <Form id="form" onSubmit={handlePublish}>
+          <AboutSection />
+          <CoordinatorSection />
+          <WhenSection />
+          <SubmitContainer>
+            <Submit value="Publish Event" />
+          </SubmitContainer>
+        </Form>
+      ) : (
+        <Validated />
+      )}
     </Root>
   );
 };
