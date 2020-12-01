@@ -3,8 +3,14 @@ import styled from 'styled-components';
 
 const Root = styled.div`
   box-shadow: var(--box-shadow);
-  padding: 12px 40px;
+  padding: 12px 0;
   background: #ffffff;
+`;
+
+const Container = styled.div`
+  max-width: 820px;
+  padding: 0 20px;
+  margin: auto;
 `;
 
 const Header = styled.div`
@@ -20,10 +26,10 @@ const Heading = styled.h2`
 `;
 
 const Contents = styled.div`
-  margin-right: 160px;
+  max-width: 660px;
   
   & > * {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 `;
 
@@ -35,12 +41,14 @@ export interface SectionProps {
 export const Section: FC<SectionProps> = ({ title, children }) => {
   return (
     <Root>
-      <Header>
-        <Heading>{title}</Heading>
-      </Header>
-      <Contents>
-        {children}
-      </Contents>
+      <Container>
+        <Header>
+          <Heading>{title}</Heading>
+        </Header>
+        <Contents>
+          {children}
+        </Contents>
+      </Container>
     </Root>
   );
 };

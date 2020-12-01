@@ -8,12 +8,12 @@ const Root = styled.div`
 `;
 
 const Heading = styled.h1`
-  width: 820px;
+  max-width: 820px;
   color: #ffffff;
   font-weight: normal;
   font-size: 28px;
   margin: auto;
-  padding: 16px 0
+  padding: 16px 20px
 `;
 
 export const Header: FC = () => {

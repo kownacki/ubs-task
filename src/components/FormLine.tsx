@@ -3,18 +3,26 @@ import styled from 'styled-components';
 
 const Root = styled.div`
   display: flex;
+  
+  @media (max-width: 599px) {
+    display: block;
+  }
 `;
 
 const Label = styled.div`
   width: 160px;
   text-transform: uppercase;
   color: var(--primary-color);
-  padding-top: 9px;
+  padding: 10px 0;
 `;
 
 const InputsContainer = styled.div`
   flex: 1;
   line-height: 36px;
+  
+  & > * {
+    margin-bottom: 2px;
+  }
 
   & > *:not(:last-child) {
     margin-right: 12px;

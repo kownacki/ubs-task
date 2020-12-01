@@ -7,7 +7,7 @@ import { WhenSection } from './sections/WhenSection';
 import { PublishButton } from './PublishButton';
 
 const Root = styled.div`
-  width: 900px;
+  max-width: 900px;
   margin: auto;
 `;
 
