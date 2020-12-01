@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import styled from 'styled-components';
+import { formDataToOutput } from '../utils/formDataToOutput';
 import { AboutSection } from './sections/AboutSection';
 import { CoordinatorSection } from './sections/CoordinatorSection';
 import { WhenSection } from './sections/WhenSection';
@@ -22,21 +23,6 @@ const SubmitContainer = styled.div`
   margin-bottom: 20px;
 `;
 
-interface Output {
-  title: string;
-  description: string;
-  category_id: number;
-  paid_event: boolean;
-  event_fee: number;
-  reward: number;
-  date: string, // YYYY-MM-DDTHH:mm (example: 2018-01-19T15:15)
-  duration: number; // in seconds
-  coordinator: {
-    email: string;
-    id: string;
-  },
-}
-
 export const Contents: FC = () => {
   const [isValidated, setIsValidated] = useState(false);
 
@@ -45,33 +31,11 @@ export const Contents: FC = () => {
 
     const formElement = document.getElementById('form') as HTMLElement;
     const formData = (new FormData(formElement as HTMLFormElement));
-    const output:Record<string, unknown> = {};
-    formData.forEach((value, key) => output[key] = value);
-    output.paid_event = output.paid_event === 'paid';
-    ['category_id', 'reward', 'duration', ...(output.paid_event ? ['event_fee'] : [])]
-      .map((key) => output[key] = Number(output[key]));
-    output.coordinator = { id: output.coordinator_id, email: output.coordinator_email };
-    //todo delete coordinator fields
-    output.duration = output.duration as number * 3600;
-    output.date = `${output.date_day}T${output.date_time}`;
-    //todo delete date fields
-    console.log(output as unknown as Output);
+    const output = formDataToOutput(formData);
 
     setIsValidated(true);
-    // console.log({
-    //   title: string,
-    //   description: string,
-    //   category_id: number,
-    //   paid_event: boolean,
-    //   event_fee: number,
-    //   reward: number,
-    //   date: string, // YYYY-MM-DDTHH:mm (example: 2018-01-19T15:15)
-    //   duration: number, // in seconds
-    //   coordinator: {
-    //     email: string,
-    //     id: string,
-    //   },
-    // });
+
+    console.log(output);
   };
 
   return (
