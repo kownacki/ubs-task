@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const PublishButton = styled.button`
+export const Submit = styled.input.attrs({ type: 'submit' })`
   color: #ffffff;
   background: var(--accent-color);
   border: none;

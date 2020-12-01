@@ -31,13 +31,14 @@ const InputsContainer = styled.div`
 
 export interface FormLineProps {
   label: string;
+  required?: boolean;
   children?: ReactNode;
 }
 
-export const FormLine: FC<FormLineProps> = ({ label, children }) => {
+export const FormLine: FC<FormLineProps> = ({ label, required, children }) => {
   return (
     <Root>
-      <Label>{label}</Label>
+      <Label>{`${label}${required ? ' *': ''}`}</Label>
       <InputsContainer>
         {children}
       </InputsContainer>

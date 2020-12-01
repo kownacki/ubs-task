@@ -27,9 +27,9 @@ export const CoordinatorSection: FC = () => {
 
   return (
     <Section title="Coordinator">
-      <FormLine label="Responsible">
+      <FormLine label="Responsible" required>
         {!isEmpty(coordinators.list) && (
-          <Select name="coordinator_id" onChange={handleCoordinatorChange}>
+          <Select name="coordinator_id" onChange={handleCoordinatorChange} required>
             <option value="" hidden>Select coordinator</option>
             <optgroup label="Me">
               <option value={userCoordinator.id}>{composeCoordinatorName(userCoordinator)}</option>

@@ -4,7 +4,7 @@ import { useCategories } from '../redux/selectors'
 import { AboutSection } from './sections/AboutSection';
 import { CoordinatorSection } from './sections/CoordinatorSection';
 import { WhenSection } from './sections/WhenSection';
-import { PublishButton } from './PublishButton';
+import { Submit } from './Submit';
 
 const Root = styled.div`
   max-width: 900px;
@@ -17,7 +17,7 @@ const Form = styled.form`
   }
 `;
 
-const ButtonContainer = styled.div`
+const SubmitContainer = styled.div`
   text-align: center;
   margin-bottom: 20px;
 `;
@@ -41,7 +41,9 @@ export const Contents: FC = () => {
   const categories = useCategories();
   console.log(categories);
 
-  const handlePublish = () => {
+  const handlePublish = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     const formElement = document.getElementById('form');
     if (formElement) {
       const formData = (new FormData(formElement as HTMLFormElement));
@@ -75,14 +77,14 @@ export const Contents: FC = () => {
 
   return (
     <Root>
-      <Form id="form">
+      <Form id="form" onSubmit={handlePublish}>
         <AboutSection />
         <CoordinatorSection />
         <WhenSection />
+        <SubmitContainer>
+          <Submit value="Publish Event" />
+        </SubmitContainer>
       </Form>
-      <ButtonContainer>
-        <PublishButton onClick={handlePublish}>Publish Event</PublishButton>
-      </ButtonContainer>
     </Root>
   );
 };

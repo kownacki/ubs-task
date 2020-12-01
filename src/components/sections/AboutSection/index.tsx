@@ -12,18 +12,20 @@ export const AboutSection: FC = () => {
 
   return (
     <Section title="About">
-      <FormLine label="Title">
+      <FormLine label="Title" required>
         <Input
           placeholder="Make it short and clear"
           name="title"
           width="100%"
+          required
         />
       </FormLine>
-      <FormLine label="Description">
+      <FormLine label="Description" required>
         <TextArea
           placeholder="Write about your event, be creative"
           rows={8}
           name="description"
+          required
         />
       </FormLine>
       <FormLine label="Category">
