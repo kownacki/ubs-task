@@ -16,7 +16,7 @@ const Label = styled.div`
   padding: 10px 0;
 `;
 
-const InputsContainer = styled.div`
+const ContentsContainer = styled.div`
   flex: 1;
 
   & > * {
@@ -38,9 +38,9 @@ export const FormLine: FC<FormLineProps> = ({ label, required, children }) => {
   return (
     <Root>
       <Label>{`${label}${required ? ' *': ''}`}</Label>
-      <InputsContainer>
+      <ContentsContainer>
         {children}
-      </InputsContainer>
+      </ContentsContainer>
     </Root>
   );
 };

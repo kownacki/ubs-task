@@ -4,6 +4,7 @@ import styled from 'styled-components';
 // Html select doesn't allow :before pseudo element, thus a wrapper is required
 const Wrapper = styled.div`
   position: relative;
+  height: 36px;
 
   &:before {
     --size: 6px;

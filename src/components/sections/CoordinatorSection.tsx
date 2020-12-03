@@ -4,7 +4,7 @@ import { useCoordinators } from '../../redux/selectors';
 import { USER_EMAIL } from '../../constants';
 import { Coordinator } from '../../types';
 import { Section } from '../Section';
-import { FormLine } from '../FormLine';
+import { FormLine } from '../form-elements/FormLine';
 import { Input } from '../form-elements/Input';
 import { Select } from '../form-elements/Select';
 

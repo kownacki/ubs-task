@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
-import { FormLine } from '../../FormLine';
+import { FormLine } from '../../form-elements/FormLine';
+import { FormBlock } from '../../form-elements/FormBlock';
 import { Input } from '../../form-elements/Input';
 import { Radio } from '../../form-elements/Radio';
 
@@ -12,14 +13,14 @@ export const Payment: FC = () => {
 
   return (
     <FormLine label="Payment">
-      <span>
+      <FormBlock>
         <Radio name="paid_event" value="free" id="free" onChange={handlePaymentChange} defaultChecked />
         <label htmlFor="free">Free event</label>
-      </span>
-      <span>
+      </FormBlock>
+      <FormBlock>
         <Radio name="paid_event" value="paid" id="paid" onChange={handlePaymentChange} />
         <label htmlFor="paid">Paid event</label>
-      </span>
+      </FormBlock>
       {isPaidEvent && (
         <>
           <Input
@@ -30,7 +31,7 @@ export const Payment: FC = () => {
             name="event_fee"
             width="90px"
           />
-          <span>$</span>
+          <FormBlock>$</FormBlock>
         </>
       )}
     </FormLine>

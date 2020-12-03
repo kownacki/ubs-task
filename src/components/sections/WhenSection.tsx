@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Section } from '../Section';
-import { FormLine } from '../FormLine';
+import { FormLine } from '../form-elements/FormLine';
+import { FormBlock } from '../form-elements/FormBlock';
 import { Input } from '../form-elements/Input';
 
 export const WhenSection: FC = () => {
@@ -8,7 +9,7 @@ export const WhenSection: FC = () => {
     <Section title="When">
       <FormLine label="Starts on" required>
         <Input type="date" name="date_day" required />
-        <span>at</span>
+        <FormBlock>at</FormBlock>
         <Input type="time" name="date_time" required />
       </FormLine>
       <FormLine label="Duration">
@@ -18,7 +19,7 @@ export const WhenSection: FC = () => {
           name="duration"
           width="90px"
         />
-        <span>hour</span>
+        <FormBlock>hour</FormBlock>
       </FormLine>
     </Section>
   );

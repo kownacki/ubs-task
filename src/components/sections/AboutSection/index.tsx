@@ -1,16 +1,13 @@
 import React, { FC } from 'react';
-import { useCategories } from '../../../redux/selectors';
 import { Section } from '../../Section';
-import { FormLine } from '../../FormLine';
-import { InlineBlock } from '../../form-elements/InlineBlock';
+import { FormLine } from '../../form-elements/FormLine';
+import { FormBlock } from '../../form-elements/FormBlock';
 import { Input } from '../../form-elements/Input';
 import { TextArea } from '../../form-elements/TextArea';
-import { Select } from '../../form-elements/Select';
+import { Categories } from './Categories';
 import { Payment } from './Payment';
 
 export const AboutSection: FC = () => {
-  const categories = useCategories();
-
   return (
     <Section title="About">
       <FormLine label="Title" required>
@@ -30,14 +27,7 @@ export const AboutSection: FC = () => {
           required
         />
       </FormLine>
-      <FormLine label="Category">
-        <Select name="category_id">
-          <option value="" hidden>Select category</option>
-          {categories.list.map((category, index) => (
-            <option value={category.id} key={index}>{category.name}</option>
-          ))}
-        </Select>
-      </FormLine>
+      <Categories />
       <Payment />
       <FormLine label="Reward">
         <Input
@@ -46,7 +36,7 @@ export const AboutSection: FC = () => {
           name="reward"
           width="90px"
         />
-        <InlineBlock>reward points for attendance</InlineBlock>
+        <FormBlock>reward points for attendance</FormBlock>
       </FormLine>
     </Section>
   );
