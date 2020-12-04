@@ -10,7 +10,7 @@ export const Categories: FC = () => {
     <FormLine label="Category">
       <Select name="category_id">
         <option value="" hidden>Select category</option>
-        {categories.list.map((category, index) => (
+        {categories.data.map((category, index) => (
           <option value={category.id} key={index}>{category.name}</option>
         ))}
       </Select>

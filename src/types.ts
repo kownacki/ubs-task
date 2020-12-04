@@ -1,13 +1,13 @@
-export const SET_CATEGORIES = 'SET_CATEGORIES';
-export const SET_COORDINATORS = 'SET_COORDINATORS';
+export enum DownloadStatus {
+  Loading,
+  Failure,
+  Success,
+}
+
 
 export interface Category {
   id: number;
   name: string;
-}
-export interface CategoriesState {
-  status: boolean;
-  list: Category[];
 }
 
 export interface Coordinator {
@@ -17,14 +17,21 @@ export interface Coordinator {
   email: string;
 }
 
-export interface CoordinatorsState {
-  status: boolean;
-  list: Coordinator[];
+export type DataName = 'categories' | 'coordinators';
+export type Data = Category[] | Coordinator[];
+
+export interface DownloadedData<T> {
+  status: DownloadStatus;
+  data: T;
+}
+
+export interface DownloadedDataState {
+  categories: DownloadedData<Category[]>;
+  coordinators: DownloadedData<Coordinator[]>;
 }
 
 export interface RootState {
-  categories: CategoriesState;
-  coordinators: CoordinatorsState;
+  downloadedData: DownloadedDataState;
 }
 
 export interface Output {

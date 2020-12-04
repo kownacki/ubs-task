@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import { categories } from './categories';
-import { coordinators } from './coordinators';
+import { downloadedData } from './downloadedData';
 
-export const reducers = combineReducers({ categories, coordinators });
+export const reducers = combineReducers({ downloadedData });

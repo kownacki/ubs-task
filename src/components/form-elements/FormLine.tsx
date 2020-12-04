@@ -1,4 +1,4 @@
-import React, {FC, ReactNode} from 'react';
+import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 
 const Root = styled.div`
@@ -13,7 +13,7 @@ const Label = styled.div`
   width: 160px;
   text-transform: uppercase;
   color: var(--primary-color);
-  padding: 10px 0;
+  padding: 10px 0 12px;
 `;
 
 const ContentsContainer = styled.div`

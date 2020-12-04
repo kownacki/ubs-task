@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import React, { FC, TextareaHTMLAttributes, useState } from 'react';
+import styled from 'styled-components';
 
 const TextAreaElement = styled.textarea`
   display: block;

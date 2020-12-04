@@ -1,4 +1,5 @@
-import { Output } from '../types';
+import { Output } from './types';
+import { CATEGORIES_PATH } from './constants';
 
 export const formDataToOutput = (formData: FormData) => {
   const rawOutput:Record<string, string> = {};
@@ -20,3 +21,10 @@ export const formDataToOutput = (formData: FormData) => {
   }
   return output;
 }
+
+export const fetchData = async (path: string) => {
+  const response = await fetch(path);
+  return response.ok
+      ? { data: await response.json(), isSuccess: true }
+      : { isSuccess: false };
+};

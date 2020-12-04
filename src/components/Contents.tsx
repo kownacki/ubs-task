@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import styled from 'styled-components';
-import { formDataToOutput } from '../utils/formDataToOutput';
+import { formDataToOutput } from '../utils';
 import { AboutSection } from './sections/AboutSection';
 import { CoordinatorSection } from './sections/CoordinatorSection';
 import { WhenSection } from './sections/WhenSection';
