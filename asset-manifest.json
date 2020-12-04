@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ubs-task/static/css/main.67be0739.chunk.css",
-    "main.js": "/ubs-task/static/js/main.de8e1d65.chunk.js",
-    "main.js.map": "/ubs-task/static/js/main.de8e1d65.chunk.js.map",
+    "main.js": "/ubs-task/static/js/main.6bd52f6d.chunk.js",
+    "main.js.map": "/ubs-task/static/js/main.6bd52f6d.chunk.js.map",
     "runtime-main.js": "/ubs-task/static/js/runtime-main.2f6054ba.js",
     "runtime-main.js.map": "/ubs-task/static/js/runtime-main.2f6054ba.js.map",
     "static/js/2.029917ed.chunk.js": "/ubs-task/static/js/2.029917ed.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.2f6054ba.js",
     "static/js/2.029917ed.chunk.js",
     "static/css/main.67be0739.chunk.css",
-    "static/js/main.de8e1d65.chunk.js"
+    "static/js/main.6bd52f6d.chunk.js"
   ]
 }
