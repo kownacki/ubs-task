@@ -13,7 +13,7 @@ const Label = styled.div`
   width: 160px;
   text-transform: uppercase;
   color: var(--primary-color);
-  padding: 10px 0 12px;
+  padding: 10px 0 13px;
 `;
 
 const ContentsContainer = styled.div`
