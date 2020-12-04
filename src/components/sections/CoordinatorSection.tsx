@@ -45,10 +45,12 @@ export const CoordinatorSection: FC = () => {
       <FormLine label="Email">
         <Input
           name="coordinator_email"
+          type="email"
           width="100%"
           placeholder="Email"
           ref={emailInput}
           data-test="email-input"
+          required
         />
       </FormLine>
     </Section>
