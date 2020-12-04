@@ -32,6 +32,7 @@ export const AboutSection: FC = () => {
       <FormLine label="Reward">
         <Input
           type="number"
+          min={0}
           placeholder="Number"
           name="reward"
           width="90px"

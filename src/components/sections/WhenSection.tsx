@@ -15,6 +15,7 @@ export const WhenSection: FC = () => {
       <FormLine label="Duration">
         <Input
           type="number"
+          min={0}
           placeholder="Number"
           name="duration"
           width="90px"
