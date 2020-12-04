@@ -1,4 +1,5 @@
-import { formDataToOutput } from './utils';
+import fetchMock from 'jest-fetch-mock';
+import { formDataToOutput, fetchData } from './utils';
 import { Output } from './types';
 
 describe('utils', () => {
@@ -55,6 +56,25 @@ describe('utils', () => {
       });
 
       expect(formDataToOutput(formData)).toEqual(expectedOutputPaidEvent);
+    });
+  });
+
+  describe('fetchData', () => {
+    beforeEach(() => {
+      fetchMock.resetMocks();
+    });
+
+    it('returns data', async () => {
+      const dataStub = [{ a: 1, b: 2 }];
+      const pathStub = 'http://path.stub'
+      fetchMock.mockResponseOnce(JSON.stringify(dataStub), { status: 200 });
+      await expect(fetchData(pathStub)).resolves.toEqual({ isSuccess: true, data: dataStub });
+    });
+
+    it('returns fail when fetch failed', async () => {
+      const queryStub = 'QUERY_STUB';
+      fetchMock.mockResponseOnce('', { status: 400 });
+      await expect(fetchData(queryStub)).resolves.toEqual({ isSuccess: false });
     });
   });
 });
