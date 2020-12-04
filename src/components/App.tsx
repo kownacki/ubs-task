@@ -1,22 +1,15 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC } from 'react';
+import { Provider } from 'react-redux';
 import '../index.css';
-import { useDispatch } from 'react-redux';
 import { Header } from './Header';
 import { Contents } from './Contents';
-import { downloadData } from '../redux/actions';
+import { store } from '../redux/store';
 
 export const App: FC = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(downloadData('categories'));
-    dispatch(downloadData('coordinators'));
-  }, [dispatch]);
-
   return (
-    <>
+    <Provider store={store}>
       <Header />
       <Contents />
-    </>
+    </Provider>
   );
 };

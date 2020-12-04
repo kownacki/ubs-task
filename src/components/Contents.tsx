@@ -1,5 +1,7 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
+import { downloadData } from '../redux/actions';
 import { formDataToOutput } from '../utils';
 import { AboutSection } from './sections/AboutSection';
 import { CoordinatorSection } from './sections/CoordinatorSection';
@@ -24,6 +26,13 @@ const SubmitContainer = styled.div`
 `;
 
 export const Contents: FC = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(downloadData('categories'));
+    dispatch(downloadData('coordinators'));
+  }, [dispatch]);
+
   const [isValidated, setIsValidated] = useState(false);
 
   const handlePublish = (event: React.FormEvent<HTMLFormElement>) => {

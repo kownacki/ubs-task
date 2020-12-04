@@ -1,0 +1,605 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+<App>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <Header>
+      <styled.div>
+        <div
+          className="sc-AxjAm ipFACa"
+        >
+          <styled.h1>
+            <h1
+              className="sc-AxirZ bsLAid"
+            >
+              New event
+            </h1>
+          </styled.h1>
+        </div>
+      </styled.div>
+    </Header>
+    <Contents>
+      <styled.div>
+        <div
+          className="sc-fzoLag jKtBLq"
+        >
+          <styled.form
+            id="form"
+            onSubmit={[Function]}
+          >
+            <form
+              className="sc-fzoXzr kSzmVC"
+              id="form"
+              onSubmit={[Function]}
+            >
+              <AboutSection>
+                <Section
+                  title="About"
+                >
+                  <styled.div>
+                    <div
+                      className="sc-AxiKw czhYLI"
+                    >
+                      <styled.div>
+                        <div
+                          className="sc-AxhCb wofSo"
+                        >
+                          <styled.div>
+                            <div
+                              className="sc-AxhUy iTOaem"
+                            >
+                              <styled.h2>
+                                <h2
+                                  className="sc-AxgMl dAMAgz"
+                                >
+                                  About
+                                </h2>
+                              </styled.h2>
+                            </div>
+                          </styled.div>
+                          <styled.div>
+                            <div
+                              className="sc-AxheI hdbqHJ"
+                            >
+                              <FormLine
+                                label="Title"
+                                required={true}
+                              >
+                                <styled.div>
+                                  <div
+                                    className="sc-Axmtr cfmhAh"
+                                  >
+                                    <styled.div>
+                                      <div
+                                        className="sc-AxmLO evZpmG"
+                                      >
+                                        Title *
+                                      </div>
+                                    </styled.div>
+                                    <styled.div>
+                                      <div
+                                        className="sc-fzozJi eVevxM"
+                                      >
+                                        <styled.input
+                                          name="title"
+                                          placeholder="Make it short and clear"
+                                          required={true}
+                                          width="100%"
+                                        >
+                                          <input
+                                            className="sc-fzpans bblOfU"
+                                            name="title"
+                                            placeholder="Make it short and clear"
+                                            required={true}
+                                            width="100%"
+                                          />
+                                        </styled.input>
+                                      </div>
+                                    </styled.div>
+                                  </div>
+                                </styled.div>
+                              </FormLine>
+                              <FormLine
+                                label="Description"
+                                required={true}
+                              >
+                                <styled.div>
+                                  <div
+                                    className="sc-Axmtr cfmhAh"
+                                  >
+                                    <styled.div>
+                                      <div
+                                        className="sc-AxmLO evZpmG"
+                                      >
+                                        Description *
+                                      </div>
+                                    </styled.div>
+                                    <styled.div>
+                                      <div
+                                        className="sc-fzozJi eVevxM"
+                                      >
+                                        <TextArea
+                                          maxLength={140}
+                                          name="description"
+                                          placeholder="Write about your event, be creative"
+                                          required={true}
+                                          rows={8}
+                                        >
+                                          <div>
+                                            <styled.textarea
+                                              maxLength={140}
+                                              name="description"
+                                              onChange={[Function]}
+                                              placeholder="Write about your event, be creative"
+                                              required={true}
+                                              rows={8}
+                                            >
+                                              <textarea
+                                                className="sc-fzplWN cECDgO"
+                                                maxLength={140}
+                                                name="description"
+                                                onChange={[Function]}
+                                                placeholder="Write about your event, be creative"
+                                                required={true}
+                                                rows={8}
+                                              />
+                                            </styled.textarea>
+                                            <styled.div>
+                                              <div
+                                                className="sc-fznyAO bAmZAn"
+                                              >
+                                                0 / 140
+                                              </div>
+                                            </styled.div>
+                                          </div>
+                                        </TextArea>
+                                      </div>
+                                    </styled.div>
+                                  </div>
+                                </styled.div>
+                              </FormLine>
+                              <Categories>
+                                <FormLine
+                                  label="Category"
+                                >
+                                  <styled.div>
+                                    <div
+                                      className="sc-Axmtr cfmhAh"
+                                    >
+                                      <styled.div>
+                                        <div
+                                          className="sc-AxmLO evZpmG"
+                                        >
+                                          Category
+                                        </div>
+                                      </styled.div>
+                                      <styled.div>
+                                        <div
+                                          className="sc-fzozJi eVevxM"
+                                        >
+                                          <Select
+                                            name="category_id"
+                                          >
+                                            <styled.div>
+                                              <div
+                                                className="sc-fznKkj dGINIB"
+                                              >
+                                                <styled.select
+                                                  name="category_id"
+                                                >
+                                                  <select
+                                                    className="sc-fznZeY jWuLvU"
+                                                    name="category_id"
+                                                  >
+                                                    <option
+                                                      hidden={true}
+                                                      value=""
+                                                    >
+                                                      Select category
+                                                    </option>
+                                                  </select>
+                                                </styled.select>
+                                              </div>
+                                            </styled.div>
+                                          </Select>
+                                        </div>
+                                      </styled.div>
+                                    </div>
+                                  </styled.div>
+                                </FormLine>
+                              </Categories>
+                              <Payment>
+                                <FormLine
+                                  label="Payment"
+                                >
+                                  <styled.div>
+                                    <div
+                                      className="sc-Axmtr cfmhAh"
+                                    >
+                                      <styled.div>
+                                        <div
+                                          className="sc-AxmLO evZpmG"
+                                        >
+                                          Payment
+                                        </div>
+                                      </styled.div>
+                                      <styled.div>
+                                        <div
+                                          className="sc-fzozJi eVevxM"
+                                        >
+                                          <styled.span>
+                                            <span
+                                              className="sc-fzoLsD goxRTH"
+                                            >
+                                              <styled.input
+                                                defaultChecked={true}
+                                                id="free"
+                                                name="paid_event"
+                                                onChange={[Function]}
+                                                value="free"
+                                              >
+                                                <input
+                                                  className="sc-fzokOt csOIHo"
+                                                  defaultChecked={true}
+                                                  id="free"
+                                                  name="paid_event"
+                                                  onChange={[Function]}
+                                                  type="radio"
+                                                  value="free"
+                                                />
+                                              </styled.input>
+                                              <label
+                                                htmlFor="free"
+                                              >
+                                                Free event
+                                              </label>
+                                            </span>
+                                          </styled.span>
+                                          <styled.span>
+                                            <span
+                                              className="sc-fzoLsD goxRTH"
+                                            >
+                                              <styled.input
+                                                id="paid"
+                                                name="paid_event"
+                                                onChange={[Function]}
+                                                value="paid"
+                                              >
+                                                <input
+                                                  className="sc-fzokOt csOIHo"
+                                                  id="paid"
+                                                  name="paid_event"
+                                                  onChange={[Function]}
+                                                  type="radio"
+                                                  value="paid"
+                                                />
+                                              </styled.input>
+                                              <label
+                                                htmlFor="paid"
+                                              >
+                                                Paid event
+                                              </label>
+                                            </span>
+                                          </styled.span>
+                                        </div>
+                                      </styled.div>
+                                    </div>
+                                  </styled.div>
+                                </FormLine>
+                              </Payment>
+                              <FormLine
+                                label="Reward"
+                              >
+                                <styled.div>
+                                  <div
+                                    className="sc-Axmtr cfmhAh"
+                                  >
+                                    <styled.div>
+                                      <div
+                                        className="sc-AxmLO evZpmG"
+                                      >
+                                        Reward
+                                      </div>
+                                    </styled.div>
+                                    <styled.div>
+                                      <div
+                                        className="sc-fzozJi eVevxM"
+                                      >
+                                        <styled.input
+                                          name="reward"
+                                          placeholder="Number"
+                                          type="number"
+                                          width="90px"
+                                        >
+                                          <input
+                                            className="sc-fzpans yGyEV"
+                                            name="reward"
+                                            placeholder="Number"
+                                            type="number"
+                                            width="90px"
+                                          />
+                                        </styled.input>
+                                        <styled.span>
+                                          <span
+                                            className="sc-fzoLsD goxRTH"
+                                          >
+                                            reward points for attendance
+                                          </span>
+                                        </styled.span>
+                                      </div>
+                                    </styled.div>
+                                  </div>
+                                </styled.div>
+                              </FormLine>
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </Section>
+              </AboutSection>
+              <CoordinatorSection>
+                <Section
+                  title="Coordinator"
+                >
+                  <styled.div>
+                    <div
+                      className="sc-AxiKw czhYLI"
+                    >
+                      <styled.div>
+                        <div
+                          className="sc-AxhCb wofSo"
+                        >
+                          <styled.div>
+                            <div
+                              className="sc-AxhUy iTOaem"
+                            >
+                              <styled.h2>
+                                <h2
+                                  className="sc-AxgMl dAMAgz"
+                                >
+                                  Coordinator
+                                </h2>
+                              </styled.h2>
+                            </div>
+                          </styled.div>
+                          <styled.div>
+                            <div
+                              className="sc-AxheI hdbqHJ"
+                            >
+                              <FormLine
+                                label="Responsible"
+                                required={true}
+                              >
+                                <styled.div>
+                                  <div
+                                    className="sc-Axmtr cfmhAh"
+                                  >
+                                    <styled.div>
+                                      <div
+                                        className="sc-AxmLO evZpmG"
+                                      >
+                                        Responsible *
+                                      </div>
+                                    </styled.div>
+                                    <styled.div>
+                                      <div
+                                        className="sc-fzozJi eVevxM"
+                                      />
+                                    </styled.div>
+                                  </div>
+                                </styled.div>
+                              </FormLine>
+                              <FormLine
+                                label="Email"
+                              >
+                                <styled.div>
+                                  <div
+                                    className="sc-Axmtr cfmhAh"
+                                  >
+                                    <styled.div>
+                                      <div
+                                        className="sc-AxmLO evZpmG"
+                                      >
+                                        Email
+                                      </div>
+                                    </styled.div>
+                                    <styled.div>
+                                      <div
+                                        className="sc-fzozJi eVevxM"
+                                      >
+                                        <styled.input
+                                          name="coordinator_email"
+                                          placeholder="Email"
+                                          width="100%"
+                                        >
+                                          <input
+                                            className="sc-fzpans bblOfU"
+                                            name="coordinator_email"
+                                            placeholder="Email"
+                                            width="100%"
+                                          />
+                                        </styled.input>
+                                      </div>
+                                    </styled.div>
+                                  </div>
+                                </styled.div>
+                              </FormLine>
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </Section>
+              </CoordinatorSection>
+              <WhenSection>
+                <Section
+                  title="When"
+                >
+                  <styled.div>
+                    <div
+                      className="sc-AxiKw czhYLI"
+                    >
+                      <styled.div>
+                        <div
+                          className="sc-AxhCb wofSo"
+                        >
+                          <styled.div>
+                            <div
+                              className="sc-AxhUy iTOaem"
+                            >
+                              <styled.h2>
+                                <h2
+                                  className="sc-AxgMl dAMAgz"
+                                >
+                                  When
+                                </h2>
+                              </styled.h2>
+                            </div>
+                          </styled.div>
+                          <styled.div>
+                            <div
+                              className="sc-AxheI hdbqHJ"
+                            >
+                              <FormLine
+                                label="Starts on"
+                                required={true}
+                              >
+                                <styled.div>
+                                  <div
+                                    className="sc-Axmtr cfmhAh"
+                                  >
+                                    <styled.div>
+                                      <div
+                                        className="sc-AxmLO evZpmG"
+                                      >
+                                        Starts on *
+                                      </div>
+                                    </styled.div>
+                                    <styled.div>
+                                      <div
+                                        className="sc-fzozJi eVevxM"
+                                      >
+                                        <styled.input
+                                          name="date_day"
+                                          required={true}
+                                          type="date"
+                                        >
+                                          <input
+                                            className="sc-fzpans kSLHGr"
+                                            name="date_day"
+                                            required={true}
+                                            type="date"
+                                          />
+                                        </styled.input>
+                                        <styled.span>
+                                          <span
+                                            className="sc-fzoLsD goxRTH"
+                                          >
+                                            at
+                                          </span>
+                                        </styled.span>
+                                        <styled.input
+                                          name="date_time"
+                                          required={true}
+                                          type="time"
+                                        >
+                                          <input
+                                            className="sc-fzpans kSLHGr"
+                                            name="date_time"
+                                            required={true}
+                                            type="time"
+                                          />
+                                        </styled.input>
+                                      </div>
+                                    </styled.div>
+                                  </div>
+                                </styled.div>
+                              </FormLine>
+                              <FormLine
+                                label="Duration"
+                              >
+                                <styled.div>
+                                  <div
+                                    className="sc-Axmtr cfmhAh"
+                                  >
+                                    <styled.div>
+                                      <div
+                                        className="sc-AxmLO evZpmG"
+                                      >
+                                        Duration
+                                      </div>
+                                    </styled.div>
+                                    <styled.div>
+                                      <div
+                                        className="sc-fzozJi eVevxM"
+                                      >
+                                        <styled.input
+                                          name="duration"
+                                          placeholder="Number"
+                                          type="number"
+                                          width="90px"
+                                        >
+                                          <input
+                                            className="sc-fzpans yGyEV"
+                                            name="duration"
+                                            placeholder="Number"
+                                            type="number"
+                                            width="90px"
+                                          />
+                                        </styled.input>
+                                        <styled.span>
+                                          <span
+                                            className="sc-fzoLsD goxRTH"
+                                          >
+                                            hour
+                                          </span>
+                                        </styled.span>
+                                      </div>
+                                    </styled.div>
+                                  </div>
+                                </styled.div>
+                              </FormLine>
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </Section>
+              </WhenSection>
+              <styled.div>
+                <div
+                  className="sc-fzpjYC kGPIwg"
+                >
+                  <styled.input
+                    value="Publish Event"
+                  >
+                    <input
+                      className="sc-fzqBZW gTTtbM"
+                      type="submit"
+                      value="Publish Event"
+                    />
+                  </styled.input>
+                </div>
+              </styled.div>
+            </form>
+          </styled.form>
+        </div>
+      </styled.div>
+    </Contents>
+  </Provider>
+</App>
+`;
