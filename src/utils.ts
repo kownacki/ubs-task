@@ -1,5 +1,4 @@
 import { Output } from './types';
-import { CATEGORIES_PATH } from './constants';
 
 export const formDataToOutput = (formData: FormData) => {
   const rawOutput:Record<string, string> = {};
