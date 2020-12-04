@@ -48,6 +48,7 @@ export const CoordinatorSection: FC = () => {
           width="100%"
           placeholder="Email"
           ref={emailInput}
+          data-test="email-input"
         />
       </FormLine>
     </Section>
